@@ -14,6 +14,7 @@ class Solution(object):
                     cmap[s[j]]=1
                     count+=1
                 else:
+                    i=j
                     break
             max_len=max(max_len,count)
         return max_len
