@@ -6,9 +6,16 @@ class Solution(object):
         :rtype: int
         """
         
-        prices.sort()
+        min1=float('inf')
+        min2=float('inf')
 
-        if (prices[0]+prices[1]) <= money:
-            return money-(prices[0]+prices[1])
-        
-        return money
+        for i in range(len(prices)):
+            
+            if prices[i]<min1:
+                min2=min1
+                min1=prices[i]                
+
+            elif prices[i]<min2:
+                min2=prices[i]
+            
+        return money if (min1+min2) > money else (money-(min1+min2))  
