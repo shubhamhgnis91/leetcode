@@ -10,29 +10,18 @@ class Solution(object):
         dic={(0,0):1}
         
         for i in range(len(path)):
-
-            if path[i]=="N":
-                y+=1                
-                
             
+            if path[i]=="N":
+                y+=1                  
             elif path[i]=="S":
                 y-=1
-                
-
             elif path[i]=="E":
                 x+=1
-                
-            
             elif path[i]=="W":
-                x-=1
-
-            
+                x-=1    
                 
             if (x,y) in dic:
-                    return True
-                
+                    return True    
             dic[(x,y)]=1
-        
-        
 
         return False
