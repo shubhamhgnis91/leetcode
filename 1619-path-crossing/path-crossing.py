@@ -7,7 +7,6 @@ class Solution(object):
         
         x=0
         y=0
-
         dic={(0,0):1}
         
         for i in range(len(path)):
@@ -29,7 +28,7 @@ class Solution(object):
 
             
                 
-            if (x,y) in dic.keys():
+            if (x,y) in dic:
                     return True
                 
             dic[(x,y)]=1
