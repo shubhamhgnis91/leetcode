@@ -9,8 +9,10 @@ class Solution(object):
         mlen=-1
 
         for i in range(len(s)):
+
             if s[i] not in dic:
                 dic[s[i]]=(i,i)
+                
             else:
                 first,_=dic[s[i]]
                 last=i
