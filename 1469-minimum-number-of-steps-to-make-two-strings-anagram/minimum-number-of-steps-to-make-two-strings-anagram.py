@@ -18,7 +18,7 @@ class Solution(object):
         
         for ch in t:
             if ch not in d or d[ch] == 0:
-                count+=1
+                count += 1
 
             else:
                 d[ch] -= 1
