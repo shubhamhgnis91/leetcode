@@ -9,20 +9,20 @@ class Solution(object):
         looser = {}
         res=[]
 
-        for i in range(len(matches)):
+        for match in matches:
             
-            if matches[i][0] in winner : 
-                winner[matches[i][0]] += 1
+            if match[0] in winner : 
+                winner[match[0]] += 1
             
             else:
-                winner[matches[i][0]] = 1
+                winner[match[0]] = 1
 
             
-            if matches[i][1] in looser :
-                looser[matches[i][1]] += 1
+            if match[1] in looser :
+                looser[match[1]] += 1
 
             else:
-                looser[matches[i][1]] = 1
+                looser[match[1]] = 1
 
         row = []
         for player in winner : 
