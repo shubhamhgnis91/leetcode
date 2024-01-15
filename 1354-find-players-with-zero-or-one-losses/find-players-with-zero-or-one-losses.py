@@ -32,7 +32,7 @@ class Solution(object):
         row.sort()
         res.append(row)
 
-        row=[]
+        row = []
         for player in looser : 
             if looser[player] == 1:
                 row.append(player)
