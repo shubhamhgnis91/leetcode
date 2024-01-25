@@ -17,6 +17,7 @@ class Solution(object):
         for i in range(1,(len(nums) + 1)):
             if i not in d:
                 res.append(i)
+                break
         
         return res
         
