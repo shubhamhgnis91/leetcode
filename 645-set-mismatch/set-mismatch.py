@@ -10,7 +10,6 @@ class Solution(object):
         for num in nums:
             if num in d:
                 res.append(num)
-                d[num] += 1
             else:
                 d[num] = 1
         
