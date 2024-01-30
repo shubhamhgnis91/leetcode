@@ -10,15 +10,7 @@ class Solution(object):
 
         for token in tokens:
             if token not in operators:
-
-                if token[0] == "-":
-                    num = int(token.lstrip('-')) * (-1)
-
-                else:
-                    num = int(token)  
-
-                stack.append(num)                
-                    
+                stack.append(int(token))                       
 
             else:
                 operand1 = stack.pop()
