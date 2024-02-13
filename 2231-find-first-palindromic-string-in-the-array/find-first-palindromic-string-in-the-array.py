@@ -5,17 +5,8 @@ class Solution(object):
         :rtype: str
         """
         
-        def isPalindrome(word):
-            n=len(word)
-
-            for i in range(n/2):
-                if word[i] != word[n-i-1]:
-                    return False
-            
-            return True
-        
         for word in words:
-            if isPalindrome(word):
+            if word == word [::-1]:
                 return word
-        
+
         return ""
