@@ -5,15 +5,9 @@ class Solution(object):
         :rtype: int
         """
         
-        numbers = {}
-        res = -1
-        
-        for num in nums:
-            numbers[num] = numbers.get(num , 0) + 1
-        
-        for i in range(len(nums) + 1):
-            if i not in numbers:
-                res = i
-                break
-        
-        return res
+        n = len(nums)
+        expected = (n * (n + 1)) / 2
+        actual = sum(nums)
+
+        return expected - actual
+            
