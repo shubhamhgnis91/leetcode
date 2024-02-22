@@ -6,9 +6,10 @@ class Solution(object):
         :rtype: int
         """
         
-        if len(trust) < 1:
+        if len(trust) == 0:
             if n == 1:
                 return 1
+                
             return -1
 
         trustFreq = {}
