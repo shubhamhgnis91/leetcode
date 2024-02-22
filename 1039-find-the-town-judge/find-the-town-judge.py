@@ -17,9 +17,7 @@ class Solution(object):
 
         for i in range(len(trust)):
             trustFreq[trust[i][1]] = trustFreq.get(trust[i][1], 0) + 1
-        
-        for i in range(len(trust)):
-            trustSomeone[trust[i][0]] = True
+            trustSomeone[trust[i][0]] = True            
 
         maxTrusted = max(trustFreq.items(), key = lambda x: x[1])
         
