@@ -5,17 +5,13 @@ class Solution(object):
         :rtype: int
         """
         
-        def solve(cost, n, dp):
-            if n <= 1:
-                return cost[n]
-            
-            if dp[n] != -1:
-                return dp[n]
-
-            dp[n] = cost[n] +  min(solve(cost, n - 1, dp), solve(cost, n -2, dp))
-            return dp[n]   
-        
         n = len(cost)
         dp = [-1] * (n + 1)
-        ans = min(solve(cost, n - 1, dp), solve(cost, n - 2, dp))
-        return ans
+
+        dp[0] = cost[0]
+        dp[1] = cost[1]
+
+        for i in range(2, n):
+            dp[i] = cost[i] + min(dp[i - 1], dp[i - 2])
+        
+        return min(dp[n - 1], dp[n - 2])
