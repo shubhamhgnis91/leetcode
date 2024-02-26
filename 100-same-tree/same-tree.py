@@ -18,9 +18,6 @@ class Solution(object):
             if p is None and q is None:
                 return True
             
-            if p.val == q.val and isSame(p.left, q.left) and isSame(p.right, q.right):
-                return True
-
-        
+            return p.val == q.val and isSame(p.left, q.left) and isSame(p.right, q.right)
 
         return isSame(p, q)
