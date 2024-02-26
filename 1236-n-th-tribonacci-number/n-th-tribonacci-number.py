@@ -4,11 +4,10 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        if n <= 1:
+        if n <= 2:
+            if n == 2:
+                return 1
             return n
-        
-        if n == 2:
-            return 1
         
         trib = [-1] * (n + 1)
         trib[0] = 0
