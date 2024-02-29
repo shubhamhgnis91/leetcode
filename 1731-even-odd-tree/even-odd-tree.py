@@ -15,7 +15,6 @@ class Solution(object):
 
         while stack:
             prev = None
-
             for _ in range(len(stack)):
                 root = stack.pop(0)
 
@@ -33,7 +32,6 @@ class Solution(object):
                     if prev is not None and prev.val <= root.val:
                         return False
 
-
                 if root.left:
                     stack.append(root.left)                
 
@@ -41,7 +39,7 @@ class Solution(object):
                     stack.append(root.right)
 
                 prev = root
-
+                
             level = not level
 
         return True
