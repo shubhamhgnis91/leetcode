@@ -17,9 +17,7 @@ class Solution(object):
             prev = None
 
             for _ in range(len(stack)):
-
                 root = stack.pop(0)
-                print(root.val)
 
                 if level % 2 == 0:
                     if root.val % 2 == 0:
