@@ -11,7 +11,7 @@ class Solution(object):
         :rtype: bool
         """
         stack = [root]
-        level = 0
+        level = True
 
         while stack:
             prev = None
@@ -19,7 +19,7 @@ class Solution(object):
             for _ in range(len(stack)):
                 root = stack.pop(0)
 
-                if level % 2 == 0:
+                if level:
                     if root.val % 2 == 0:
                         return False
 
@@ -42,6 +42,6 @@ class Solution(object):
 
                 prev = root
 
-            level += 1
+            level = not level
 
         return True
