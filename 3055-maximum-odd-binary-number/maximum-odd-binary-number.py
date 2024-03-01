@@ -17,14 +17,8 @@ class Solution(object):
         oneBits = bitFreq['1']
         zeroBits = bitFreq['0']
 
-        while oneBits > 1:
-            res += '1'
-            oneBits -= 1
-        
-        while zeroBits:
-            res += '0'
-            zeroBits -= 1
-
+        res += '1' * (oneBits - 1)
+        res += '0' * (zeroBits)
         res += '1'
 
         return res
