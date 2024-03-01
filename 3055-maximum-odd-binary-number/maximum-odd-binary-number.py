@@ -5,5 +5,14 @@ class Solution(object):
         :rtype: str
         """
         
-        return '1' * (s.count('1') - 1) + '0' * (s.count('0')) + '1'
+        res = ""        
+
+        oneBits = s.count('1')
+        zeroBits = len(s) - oneBits
+
+        res += '1' * (oneBits - 1)
+        res += '0' * (zeroBits)
+        res += '1'
+
+        return res
 
