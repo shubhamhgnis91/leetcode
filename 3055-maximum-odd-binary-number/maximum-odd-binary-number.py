@@ -17,9 +17,6 @@ class Solution(object):
         oneBits = bitFreq['1']
         zeroBits = bitFreq['0']
 
-        print(oneBits)
-        print(zeroBits)
-
         while oneBits > 1:
             res += '1'
             oneBits -= 1
