@@ -5,12 +5,13 @@ class Solution(object):
         :rtype: int
         """
         freq = {}
-
+        maxFreq = 0
+        count = 0
+        
         for num in nums:
             freq[num] = freq.get(num, 0) + 1
+            maxFreq = max(maxFreq, freq[num])
 
-        maxFreq = max(freq.values())
-        count = 0
 
         for num in freq:
             if freq[num] == maxFreq:
