@@ -17,7 +17,7 @@ class Solution(object):
             freq2[num] = freq2.get(num, 0) + 1
 
         
-        if len(freq1) < len(freq2):
+        if len(freq1) > len(freq2):
             freq1, freq2 = freq2, freq1
 
         for num in freq1:
