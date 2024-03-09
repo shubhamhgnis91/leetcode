@@ -7,16 +7,15 @@ class Solution(object):
         """
         
         res = []
-        freq1 = {}
-        
+        freq = {}        
 
         for num in nums1:
-            freq1[num] = freq1.get(num, 0) + 1        
+            freq[num] = freq.get(num, 0) + 1        
         
         for num in nums2:
-            if num in freq1 and freq1[num] > 0:
+            if num in freq and freq[num] > 0:
                 res.append(num)
-                freq1[num] -= 1
+                freq[num] -= 1
 
         return res
         
