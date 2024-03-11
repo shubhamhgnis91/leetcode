@@ -12,24 +12,15 @@ class Solution(object):
         for letter in s:
             charMap[letter] = charMap.get(letter, 0) + 1
 
-        print(charMap)
-
         for letter in order:
             if letter in charMap:
-                while charMap[letter] > 0:
-                        res += letter
-                        charMap[letter] -= 1
-                
-        print(charMap)
-
-
+                res += charMap[letter] * letter
+                charMap[letter] = 0
+                        
         for letter in charMap:
-            while charMap[letter] > 0:
-                res += letter
-                charMap[letter] -= 1
+            if charMap[letter] > 0:
+                res += charMap[letter] * letter
         
-        print(charMap)
-    
         return res
 
         
