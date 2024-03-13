@@ -4,8 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        res = (((n * (n + 1)) / 2) ** 0.5)
-        if res.is_integer():
-            return int(res)
-        return -1
+        x = (((n * (n + 1)) / 2) ** 0.5)
+        return int(x) if x.is_integer() else -1
         
