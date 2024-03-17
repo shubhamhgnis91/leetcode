@@ -9,8 +9,7 @@ class Solution(object):
         dividend = max(nums)
 
         while True:
-
-            quotient = dividend // divisor
+            
             remainder = dividend % divisor
 
             if remainder == 0:
