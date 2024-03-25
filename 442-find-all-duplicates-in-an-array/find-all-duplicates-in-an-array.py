@@ -4,12 +4,12 @@ class Solution:
         res = []
 
         for num in nums:
-            x = abs(num) - 1
-            if nums[x] < 0:
-                res.append(x + 1)
+            n = abs(num)
             
-            else:
-                nums[x] *= -1
+            if nums[n - 1] < 0:
+                res.append(n)
+            
+            nums[n - 1] = - nums[n - 1]
 
         return res
 
