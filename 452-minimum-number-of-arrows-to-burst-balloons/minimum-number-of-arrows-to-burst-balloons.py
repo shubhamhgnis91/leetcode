@@ -11,7 +11,7 @@ class Solution:
 
             if curr[0] <= prev[1]:
                 res -= 1
-                prev = [min(curr[0], prev[0]), min(curr[1], prev[1])]
+                prev = [curr[0], min(curr[1], prev[1])]
 
             else:
                 prev = curr
