@@ -10,7 +10,7 @@ class Solution:
             curr = nums[right]
             freq[curr] = freq.get(curr, 0) + 1
 
-            while left < right and freq[curr] > k:
+            while left <= right and freq[curr] > k:
                 freq[nums[left]] = freq.get(nums[left], 0) - 1
                 left += 1
 
