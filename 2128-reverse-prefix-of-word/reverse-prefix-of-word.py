@@ -20,4 +20,4 @@ class Solution:
             index -= 1
 
         return s + word[temp + 1::]
-        print(s)
+        
