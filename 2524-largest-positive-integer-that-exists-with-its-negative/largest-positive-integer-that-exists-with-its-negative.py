@@ -13,7 +13,7 @@ class Solution:
             elif nums[i] > -nums[j]:
                 i += 1
 
-            elif nums[i] < -nums[j]:
+            else:
                 j -= 1
 
         return -1
