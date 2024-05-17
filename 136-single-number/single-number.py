@@ -4,6 +4,6 @@ class Solution:
         res = 0
 
         for n in nums:
-            res = res ^ n
+            res ^= n
 
         return res
