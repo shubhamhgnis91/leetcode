@@ -1,14 +1,9 @@
-class Solution(object):
-    def singleNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        numbers = {}
-
-        for num in nums:
-            numbers[num] = numbers.get(num,0) + 1
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
         
-        for num in numbers:
-            if numbers[num] == 1:
-                return num
+        res = 0
+
+        for n in nums:
+            res = res ^ n
+
+        return res
