@@ -2,9 +2,7 @@ class Solution:
     def replaceWords(self, dictionary: List[str], sentence: str) -> str:
         res = []
 
-        d = {}
-        for word in dictionary:
-            d[word] = d.get(word, 0) + 1
+        d = set(dictionary)
 
         s = sentence.split(" ")
         subS = False
