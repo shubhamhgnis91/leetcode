@@ -3,7 +3,7 @@ class Solution:
         
         negCount = 0
         ans = 0
-        s = 10e5 + 1
+        s = float('inf')
 
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
