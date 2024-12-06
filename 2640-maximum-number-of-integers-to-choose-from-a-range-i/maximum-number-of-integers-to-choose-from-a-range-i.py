@@ -8,12 +8,12 @@ class Solution:
         res = 0
         prefixSum = 0
         for i in range(1, n + 1):
-            if i not in banned:
+            if i not in m:
                 prefixSum += i
                 if prefixSum <= maxSum:
                     res += 1
 
                 else:
                     break
-        
+
         return res
