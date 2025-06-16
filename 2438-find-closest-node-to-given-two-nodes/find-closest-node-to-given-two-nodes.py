@@ -8,8 +8,6 @@ class Solution:
         for i, dist in enumerate(edges):
             adj[i].append(dist)
 
-        print(adj)
-
         def bfs(src, distMap):
 
             q = deque()
