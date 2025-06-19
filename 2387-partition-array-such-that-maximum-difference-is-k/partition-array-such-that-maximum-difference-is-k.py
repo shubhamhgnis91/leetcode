@@ -8,13 +8,11 @@ class Solution:
         maxN = nums[0] + k
 
         for i in range(1, len(nums)):
-            if nums[i] <= maxN:
-                continue
-
-            minN = nums[i]
-            maxN = nums[i] + k
-            count += 1
-
+            if nums[i] > maxN:
+                minN = nums[i]
+                maxN = nums[i] + k
+                count += 1
+        
         return count
 
 
