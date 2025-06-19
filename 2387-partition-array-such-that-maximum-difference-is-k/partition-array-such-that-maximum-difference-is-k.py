@@ -7,7 +7,7 @@ class Solution:
         minN = nums[0]
         maxN = nums[0] + k
 
-        for i in range(len(nums)):
+        for i in range(1, len(nums)):
             if nums[i] <= maxN:
                 continue
 
