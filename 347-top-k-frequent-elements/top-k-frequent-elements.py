@@ -6,13 +6,15 @@ class Solution:
         for num in nums:
             mp[num] = mp.get(num, 0) + 1
 
-        mp = dict(sorted(mp.items(), key = lambda x:x[1], reverse = True))
-        res = []
+        bucket = [[] for _ in range(len(nums) + 1)]
+
         for item in mp:
-            if k < 1:
-                break
+            bucket[mp[item]].append(item)
 
-            res.append(item)
-            k -= 1
+        res = []
 
-        return res
+        for i in range(len(bucket) - 1, -1, -1):
+            for n in bucket[i]:
+                res.append(n)
+                if len(res) == k:
+                    return res
