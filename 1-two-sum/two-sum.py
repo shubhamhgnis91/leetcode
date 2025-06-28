@@ -1,19 +1,10 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        dMap = {}
-
-        for i in range(len(nums)):
-            diff = target - nums[i]
-            
-            if nums[i] in dMap:
-                return [dMap[nums[i]], i]
-            else:
-                dMap[diff] = i
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         
-            
+        mp = {}
+        for i, num in enumerate(nums):
+            mp[num] = i
 
+        for i, num in enumerate(nums):
+            if (target - num) in mp and mp[target - num] != i:
+                return [i, mp[target - num]]
