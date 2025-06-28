@@ -1,23 +1,24 @@
-class Solution(object):
-    def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        """
-        
-        dictionary = {}
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        mp = collections.defaultdict(list)
+
+        for word in strs:
+            w = sorted(word)
+
+            w1 = ""
+            for c in w:
+                w1 += c
+
+            mp[w1].append(word)
+
+        print(mp)
         res = []
+        for word in mp:
+            row = []
 
-        for i in range(len(strs)):
-            temp = tuple(sorted(strs[i]))
-            
-            if temp in dictionary:
-                dictionary[temp].append(strs[i])
-            
-            else:
-                dictionary[temp] = [strs[i]]
+            for w in mp[word]:
+                row.append(w)
 
-        for i in dictionary:
-            res.append(dictionary[i])
+            res.append(row)
 
         return res
