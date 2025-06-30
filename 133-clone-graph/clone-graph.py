@@ -15,7 +15,8 @@ class Solution:
         mp = {}
         
         def bfs(node):
-            q = deque([node])
+            q = deque()
+            q.append(node)
             mp[node] = Node(node.val)
 
             while q:
