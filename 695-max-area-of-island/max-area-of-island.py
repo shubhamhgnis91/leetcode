@@ -15,7 +15,7 @@ class Solution:
             
             area = 1
             while q:
-                r, c = q.popleft()
+                r, c = q.pop()
                 
                 neighbours = [[r + 1, c], [r - 1, c], [r, c + 1], [r, c - 1]]
                 for x, y in neighbours:
