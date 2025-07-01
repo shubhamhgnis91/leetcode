@@ -11,7 +11,7 @@ class Solution:
         queue.append((p, q))
 
         while queue:
-            x, y = queue.popleft()
+            x, y = queue.pop()
 
             if not x and not y:
                 continue
