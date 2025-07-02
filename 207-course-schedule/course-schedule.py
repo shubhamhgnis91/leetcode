@@ -6,7 +6,7 @@ class Solution:
         for course in prerequisites:
             adj[course[0]].append(course[1])
 
-        # cycle detect using dfs iterative
+        # cycle detect using dfs
         visited = set()
         def dfs(course):
             if not adj[course]:
