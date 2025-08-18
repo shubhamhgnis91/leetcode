@@ -4,9 +4,10 @@ class Solution:
         if not grid:
             return 0
 
-        rows, cols = len(grid), len(grid[0])
         visited = set()
         res = 0
+        rows, cols = len(grid), len(grid[0])
+
 
         def dfs(row, col):
             q = deque()
@@ -15,19 +16,22 @@ class Solution:
 
             while q:
                 r, c = q.popleft()
-                neighbours = [[r + 1, c], [r - 1, c], [r, c + 1], [r, c - 1]]
+                neighbours = [[r, c - 1], [r, c + 1], [r + 1, c], [r - 1, c]]
 
                 for x, y in neighbours:
                     if x in range(rows) and y in range(cols) and grid[x][y] == "1" and (x, y) not in visited:
-                        q.append((x, y))
                         visited.add((x, y))
+                        q.append((x, y))
 
-
-
-        for r in range(rows):
-            for c in range(cols):
-                if grid[r][c] == "1" and (r, c) not in visited:
-                    dfs(r, c)
+        
+        for i in range(rows):
+            for j in range(cols):
+                if grid[i][j] == "1" and (i, j) not in visited:
+                    dfs(i, j)
                     res += 1
 
+
         return res
+
+
+
