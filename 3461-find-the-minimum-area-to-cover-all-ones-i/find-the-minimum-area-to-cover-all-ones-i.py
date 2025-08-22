@@ -14,11 +14,7 @@ class Solution:
                     top = min(top, i)
                     bottom = max(bottom, i)
                     left = min(left, j)
-                    right = max(right, j)
-
-        # No 1s found
-        if bottom == -1:
-            return 0  
+                    right = max(right, j) 
 
         height = bottom - top + 1
         width = right - left + 1
